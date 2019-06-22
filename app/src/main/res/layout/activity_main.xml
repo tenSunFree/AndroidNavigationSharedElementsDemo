@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!--
+    navGraph: 用來指定導航意圖文件
+    defaultNavHost: 表示是否攔截返回鍵, 默認為false, 會退出當前activity
+    name: 必須指定如下的值, 表示這是一個可以切換fragment的控件
+    -->
+    <fragment
+            android:id="@+id/nav_host"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/app_navigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+    </fragment>
+</androidx.constraintlayout.widget.ConstraintLayout>

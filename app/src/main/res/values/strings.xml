@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidNavigationSharedElementsDemo</string>
+    <string name="one_piece">onePiece</string>
+    <string name="wanted_order">wantedOrder</string>
+    <string name="name">name</string>
+    <string name="identity">identity</string>
+    <string name="introduction">introduction</string>
+</resources>

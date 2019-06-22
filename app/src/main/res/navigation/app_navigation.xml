@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- startDestination: 表示第一個顯示的fragment -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/app_navigation"
+            app:startDestination="@id/firstFragment">
+
+    <fragment android:id="@+id/firstFragment"
+              android:name="com.home.androidnavigationsharedelementsdemo.fragment.FirstFragment"
+              android:label="firstFragment"
+              tools:layout="@layout/fragment_first">
+
+        <!-- destination: 用於指定下一個目標fragment -->
+        <action android:id="@+id/secondFragmentAction"
+                app:destination="@id/secondFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/secondFragment"
+              android:name="com.home.androidnavigationsharedelementsdemo.fragment.SecondFragment"
+              android:label="secondFragment"
+              tools:layout="@layout/fragment_second">
+
+        <!-- 設置fragment所接收的參數 -->
+        <argument android:name="name" app:argType="string" android:defaultValue="name"/>
+        <argument android:name="identity" app:argType="string" android:defaultValue="identity"/>
+        <argument android:name="moreIntroduction" app:argType="string" android:defaultValue="moreIntroduction"/>
+    </fragment>
+</navigation>
